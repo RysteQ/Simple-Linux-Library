@@ -4,7 +4,7 @@ section .text
 
 _start:
     ; YOUR CODE HERE
-    ; Please keep in mind that SLL is still a work in progress
+    ; Please keep in mind that SLL is still a work in progress 
 
     call exit
 

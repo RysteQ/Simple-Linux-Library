@@ -1,9 +1,11 @@
 %include "input_output.asm"
-%include "misc.asm"
+%include "exit.asm"
 %include "constants.asm"
 %include "files.asm"
 %include "networking.asm"
 %include "directories.asm"
+%include "sleep.asm"
+%include "process.asm"
 
-%include "data_section.asm"
 %include "bss_section.asm"
+%include "data_section.asm"

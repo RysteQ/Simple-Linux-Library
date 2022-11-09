@@ -1,3 +1,25 @@
+; checks if the file can be opened with 0666o permissions
+can_access_rsi:
+    push qword rax
+    push qword rdx
+
+    ; move the value of zero (false)
+    mov [can_access], byte 0
+
+    ; check if the file can be accessed
+    mov rax, qword 21
+    mov rdx, qword 0666o
+    syscall
+
+    ; move the result to the can_access memory location
+    mov [can_access], byte al
+
+    ; retrieve previously saved values
+    pop qword rdx
+    pop qword rax
+
+    ret
+
 ; open the file with the name saved in the rdi register with the rsi flags
 open_file_rdi_rsi:
     push qword rax
