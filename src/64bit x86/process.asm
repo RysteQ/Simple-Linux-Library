@@ -1,5 +1,5 @@
 ; kills the process with the pid specified in the rdi registed
-kill_process_rdi:
+process_kill_process_rdi:
     push qword rax
     push qword rsi
 

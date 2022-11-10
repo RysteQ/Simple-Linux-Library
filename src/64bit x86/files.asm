@@ -1,5 +1,5 @@
 ; checks if the file can be opened with 0666o permissions
-can_access_rsi:
+files_can_access_rsi:
     push qword rax
     push qword rdx
 
@@ -21,7 +21,7 @@ can_access_rsi:
     ret
 
 ; open the file with the name saved in the rdi register with the rsi flags
-open_file_rdi_rsi:
+files_open_file_rdi_rsi:
     push qword rax
     push qword rdx
 
@@ -40,7 +40,7 @@ open_file_rdi_rsi:
     ret
 
 ; write the rsi contents to the file, the rdx is needed for the length of the contents
-write_file_rsi_rdx:
+files_write_file_rsi_rdx:
     push qword rax
     push qword rdi
 
@@ -56,7 +56,7 @@ write_file_rsi_rdx:
     ret
 
 ; write the rsi contents to the file
-write_file_rsi:
+files_write_file_rsi:
     push qword rax
     push qword rdi
     push qword rdx
@@ -86,7 +86,7 @@ write_file_rsi:
     ret
 
 ; read file contents to the rsi register with the maximum length of rdx
-read_file_rsi_rdx:
+files_read_file_rsi_rdx:
     push qword rax
     push qword rdi
 
@@ -101,7 +101,7 @@ read_file_rsi_rdx:
     ret
 
 ; close the file
-close_file:
+files_close_file:
     push qword rax
     push qword rdi
 

@@ -1,4 +1,4 @@
-socket_rdi_rsi_rdx:
+networking_socket_rdi_rsi_rdx:
     push qword rax
 
     ; create the socket
@@ -12,7 +12,7 @@ socket_rdi_rsi_rdx:
 
     ret
 
-connect_rdi_rsi_rdx:
+networking_connect_rdi_rsi_rdx:
     push qword rax
     
     ; TODO

@@ -1,4 +1,4 @@
-read_input_rsi_rdx:
+input_output_read_input_rsi_rdx:
     push qword rax
     push qword rdi
 
@@ -11,7 +11,7 @@ read_input_rsi_rdx:
 
     ret
 
-print_string_rsi_rdx:
+input_output_print_string_rsi_rdx:
     push qword rax
     push qword rdi
 
@@ -24,7 +24,7 @@ print_string_rsi_rdx:
 
     ret
 
-print_string_rsi:
+input_output_print_string_rsi:
     push qword rax
     push qword rdi
     push qword rdx
@@ -53,7 +53,7 @@ print_string_rsi:
 
     ret
 
-print_number_rax:
+input_output_print_number_rax:
     push qword rax
     push qword rdx
     push qword rcx
@@ -91,7 +91,7 @@ print_number_rax:
 
     print_number_rax_print_number:
         mov rsi, number_buffer
-        call print_string_rsi
+        call input_output_print_string_rsi
 
     pop qword r15
     pop qword rcx
