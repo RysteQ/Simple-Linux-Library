@@ -115,3 +115,16 @@ files_close_file:
     pop qword rax
 
     ret
+
+; renames the file, rdi is the old file path and rsi is the new file path and name
+files_rename_file_rdi_rsi:
+    push qword rax
+
+    ; rename the file
+    mov rax, qword 82
+    syscall
+
+    ; retrieve the previously saved values
+    pop qword rax
+
+    ret
